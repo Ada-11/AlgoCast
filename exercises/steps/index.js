@@ -42,7 +42,7 @@ function steps (n, row=0, stair = ''){
   //want to print out
   console.log(stair)
   //call the funx on the next row and return
-  return steps(n, row + 1) //for stair we're gonna use an empty stair each row
+  return steps(n, row + 1) //for stair we're gonna use an empty stair each row, which is the default val
   }
 
   if (stair.length <= row){ //the pattern is that number of # == row num
