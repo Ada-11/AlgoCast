@@ -31,7 +31,7 @@
 
 function slowfib(n){  //the standard recursive fux 2 b improved
   if ( n < 2) return n
-  return slowfib(n - 2) + slowfib( n - 1 )
+  return fib(n - 2) + fib( n - 1 ) //!!!fib as the faster fux to be called here
 }
 //memoization fux
 // slow fux as arg, returns a faster fux
