@@ -21,10 +21,34 @@
 
 //RECURSIVE SOLUTION
 //very bad Time Complexity 2**N(2^N)
-function fib(n) {
 
+// function fib(n) {
+//   if ( n < 2) return n
+//     return fib(n - 2) + fib( n - 1 )
+//   }
+
+//Memoization version to improve recursive call Time performance
+
+function slowfib(n){  //the standard recursive fux 2 b improved
   if ( n < 2) return n
-    return fib(n - 2) + fib( n - 1 )
-  }
+  return slowfib(n - 2) + slowfib( n - 1 )
+}
+//memoization fux
+// slow fux as arg, returns a faster fux
+function memoize(fn){
+const cache = {}
+
+return function(...args){ //arg is an array of arg in case we have >1 arg
+
+  if (cache[args]) return cache[args] //return val if already saved in cache
+
+let result = fn.apply(this,args)  //else slow fux with arg &put val in cache
+cache[args] = result
+return result
+}
+
+}
+//speeding up fib through memoize
+const fib = memoize(slowfib)
 
 module.exports = fib;
