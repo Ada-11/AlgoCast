@@ -8,6 +8,19 @@
 //     q.add(1);
 //     q.remove(); // returns 1;
 
-class Queue {}
+class Queue {
+  constructor(){
+    this.queue= []
+  }
+
+  add(node){
+  this.queue.unshift(node)
+  //for method chaining we can return this
+  // return this
+  }
+  remove(){
+    return this.queue.pop() //returns removed elem
+  }
+}
 
 module.exports = Queue;
