@@ -16,6 +16,10 @@ class Queue {
   remove() {
     return this.data.pop();
   }
+  peek(){
+   return this.data[this.data.length-1] //the last in the line is the first to be pushed in
+  }
+
 }
 
 module.exports = Queue;
