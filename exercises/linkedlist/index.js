@@ -78,15 +78,46 @@ removeLast(){
 insertLast(data){
 
   let lastNode = this.getLast()
-  if(lastNode) {
+  if (lastNode) {
      lastNode.next = new Node(data)
-  }else{
+  } else {
     this.head = new Node(data)
 
   }
+}
+// getAt(num){
+// let counter = 0
+// if(!this.head) return null
+// if(this.size()< num) return null
+// let node = this.head
+
+// while(counter !== num){
+//   if(node.next){
+//     node=node.next
+//     counter++
+//   }
+
+// }
+// return node
+// }
+getAt(index){
+
+let counter = 0
+
+//if (!this.head) return null // this case being handled by the loop condition
+ let node = this.head
+ while (node){
+  if (counter === index){
+    return node
+  }
+  counter++
+  node = node.next
+
+ }
+
+return null
 
 }
-
 
 
 }
