@@ -178,7 +178,18 @@ insertAt(data, index){
   previous.next = node
 
 }
+forEach(fn){
+  if(!this.head) return
+  let node = this.head
+  while (node){
+    fn(node)
+    node=node.next
+  }
+  return this.head
+}
+forOf(){
+  if (!this.head) return
 
-
+}
 }
 module.exports = { Node, LinkedList };
