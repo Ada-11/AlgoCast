@@ -75,15 +75,16 @@ removeLast(){
   }
   previous.next = null
 }
+
 insertLast(data){
 
   let lastNode = this.getLast()
   if (lastNode) {
-     lastNode.next = new Node(data)
+   lastNode.next = new Node(data)
   } else {
     this.head = new Node(data)
 
-  }
+ }
 }
 // getAt(num){
 // let counter = 0
@@ -116,6 +117,65 @@ let counter = 0
  }
 
 return null
+
+}
+removeAt(index){
+ if (!this.head) return
+  if ( index ===0) {
+  this.head = this.head.next
+    return
+  }
+  else {
+    let prev = this.getAt(index-1)
+    let node = this.getAt(index)
+
+    if(node && prev) prev.next = node.next
+
+  }
+}
+// insertAt(data, index){
+//   let nuNode = new Node(data)
+//   if(!this.head){
+//   this.head= nuNode
+//   return
+//   }
+
+//   if(index===0){
+//     nuNode.next=this.head
+//     this.head=nuNode
+//     //this.head= new Node(data, this.head)
+//     return
+//   }
+//   let prevNode = this.getAt(index-1)
+//   let currNode = this.getAt(index)
+//   if (prevNode && currNode){
+
+//     nuNode.next=currNode
+//     prevNode.next=nuNode
+//   } else if (!currNode){
+//     prevNode.next=nuNode
+//     nuNode.next=null
+//   }else {
+//     const last = getLast()
+//     last.next=nuNode
+//     nuNode.next = null
+//    }
+//   }  //my solution, last test not passing
+
+//Stephen's solution
+
+insertAt(data, index){
+  if(!this.head){
+      this.head= new Node(data)
+      return
+      }
+  if(index===0){
+    this.head = new Node(data, this.head)
+    return
+  }
+  const previous = this.getAt(index-1) || this.getLast()
+  const node = new Node(data, previous.next)
+  previous.next = node
 
 }
 
