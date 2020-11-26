@@ -50,8 +50,8 @@ function steps (n, row=0, stair = ''){
   } else {
     stair += " "
   }
- //call the fux again
- steps(n, row, stair)
+
+ steps(n, row, stair) //call the fux again
 }
 
 module.exports = steps;
