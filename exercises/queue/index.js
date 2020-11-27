@@ -19,7 +19,8 @@ class Queue {
   // return this
   }
   remove(){
-    return this.queue.pop() //returns removed elem
+    return this.queue.pop()
+    //returns removed elem
   }
 }
 

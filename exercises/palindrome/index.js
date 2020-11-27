@@ -24,7 +24,7 @@
   function palindrome(str) {
   let arrStr = str.split('')
   let nuArr = []
-    while(arrStr.length > 0){
+    while (arrStr.length > 0){
       nuArr.push(arrStr.pop())
     }
   return str === nuArr.join('')
