@@ -28,7 +28,8 @@ function weave(sourceOne, sourceTwo) {
   let queue = new Queue
 
   while (sourceOne.peek()|| sourceTwo.peek() ){
-
+// while stack one is not empty, keep removing& add to queue
+// while stack two is not empty, keep removing& add to queue
     if (sourceOne.peek()){
       queue.add(sourceOne.remove())
     }
