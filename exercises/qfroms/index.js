@@ -16,8 +16,8 @@ const Stack = require('./stack');
 
 class Queue {
   constructor(){
-    this.stack1 = new Stack()
-    this.stack2 = new Stack()
+    this.stack1 = new Stack() //first stack
+    this.stack2 = new Stack() //second stack
   }
 add(elem){
 this.stack1.push(elem)
