@@ -15,11 +15,11 @@ function fromLast(list, n) {
   let slow = list.head
   let fast = list.head
 
-  while (n>0){
+  while (n>0){ //advance n nodes
     fast = fast.next
     n--
-  }                
-  while (fast.next){
+  }
+  while (fast.next){ //advance one node while not the end
     fast = fast.next
     slow = slow.next
   }
