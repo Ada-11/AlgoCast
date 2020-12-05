@@ -23,7 +23,7 @@ function fromLast(list, n) {
     fast = fast.next
     slow = slow.next
   }
- return slow   //just some changes 
+ return slow    
 }
 
 module.exports = fromLast;
