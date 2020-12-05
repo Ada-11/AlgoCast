@@ -196,7 +196,7 @@ forEach(fn){
     counter++
   }
 }
-  *[Symbol.iterator]() {
+  *[Symbol.iterator]() { //itirator
     let node = this.head
     while(node){
      yield node
