@@ -185,7 +185,7 @@ insertAt(data, index){
 //     fn(node)
 //     node=node.next
 //   }
-//   return this.head
+//   //return this.head
 // }
 forEach(fn){
   let node = this.head
