@@ -21,12 +21,23 @@ class Node {
   remove(data){
     this.children = this.children.filter(node => node.data !== data)
   }
-}
+
+
+  }
+
 
 class Tree {
   constructor(){
     this.root = null
   }
-}
+  traverseBF(fn){
+    let queue = [this.root]
+    while (queue.length){
+      let node = queue.shift()
+        queue.push(...node.children)
+        fn(node)
+      }
 
+}
+}
 module.exports = { Tree, Node };
