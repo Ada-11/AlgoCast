@@ -39,5 +39,15 @@ class Tree {
       }
 
 }
+traverseDF(fn){
+let stack = [this.root]
+
+while (stack.length){
+  let node = stack.shift()
+    stack.unshift(...node.children) //the only diff btw these two is unshift/push
+    fn(node)
+  }
+
+}
 }
 module.exports = { Tree, Node };
