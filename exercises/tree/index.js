@@ -41,13 +41,23 @@ class Tree {
 }
 traverseDF(fn){
 let stack = [this.root]
-
 while (stack.length){
   let node = stack.shift()
     stack.unshift(...node.children) //the only diff btw these two is unshift/push
     fn(node)
   }
-
 }
+/*
+create a nu arr ( queue with BFS and Stack with DFS)
+put this.root in the queue/stack
+while(queue/stack.length)
+take node from the beginning of the arr queue.shift() stack.shift()
+spread the children of the current node and push them at the end for BFS or at the begining for DFS
+// stack.unshift()- adding children at d beg / queue.push() add child at the end
+then call function on current node
+
+
+
+*/
 }
 module.exports = { Tree, Node };
