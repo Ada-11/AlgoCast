@@ -39,7 +39,15 @@ function mergeSort(arr) {
 }
 
 function merge(left, right) {
+let result = []
 
+while ( left.length && right.length){
+ if(left[0]< right[0]){
+   result.push(left.shift());
+ }else result.push(right.shift());
+}
+//instead of two if statements here we use spread op
+ return [ ...result, ...left, ...right];
 }
 
 module.exports = { bubbleSort, selectionSort, mergeSort, merge };
