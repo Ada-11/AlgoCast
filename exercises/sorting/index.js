@@ -35,16 +35,22 @@ function selectionSort(arr) {
 }
 
 function mergeSort(arr) {
+  //this func is gonna split the arr in two parts
+  if ( arr.length === 1) return arr;
+ let center = Math.floor(arr.length / 2)
+ let left = arr.splice(0, center);
+ let right = arr.splice(center);
 
+return merge(mergeSort(left), mergeSort(right));
 }
 
 function merge(left, right) {
-let result = []
+let result = [];
 
 while ( left.length && right.length){
- if(left[0]< right[0]){
+ if (left[0]< right[0]){
    result.push(left.shift());
- }else result.push(right.shift());
+ } else result.push(right.shift());
 }
 //instead of two if statements here we use spread op
  return [ ...result, ...left, ...right];
