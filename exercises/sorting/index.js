@@ -34,8 +34,8 @@ function selectionSort(arr) {
  return arr;
 }
 
-function mergeSort(arr) {
-  //this func is gonna split the arr in two parts
+function mergeSort(arr) { //mergeSort
+  //this func is gonna split the arr in two parts/=
   if ( arr.length === 1) return arr;
  let center = Math.floor(arr.length / 2)
  let left = arr.splice(0, center);
