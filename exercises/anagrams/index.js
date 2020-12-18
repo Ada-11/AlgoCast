@@ -32,8 +32,7 @@
 // function anagrams(stringA, stringB) {
 // const map1 = builtMap(stringA)
 // const map2 = builtMap(stringB)
-
-// if(Object.keys(map1).length!== Object.keys(map2).length) return false
+// if(Object.keys(map1).length!== Object.keys(map2).length)      return false
 
 //  for(let char in map1){
 //    if(map1[char] !== map2[char]) return false
@@ -41,7 +40,8 @@
 //   return true
 // }
 
-// function builtMap(str){
+
+// function builtMap(str){  //helper function
 //   const charMap ={}
 //   for(let char of str.replace(/[^\w]/g,'')){
 //     charMap[char]= charMap+1 || 1
