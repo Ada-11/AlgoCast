@@ -27,6 +27,8 @@
 // return true
 // }
 
+// Second method
+
 // function anagrams(stringA, stringB) {
 // const map1 = builtMap(stringA)
 // const map2 = builtMap(stringB)
