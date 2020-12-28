@@ -57,3 +57,15 @@ return false
 }
 
 module.exports = anagrams;
+
+/*
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Cheatsheet
+
+^ Matches the beginning of input. If the multiline flag is set to true, also matches immediately after a line break character. For example, /^A/ does not match the "A" in "an A", but does match the first "A" in "An A".
+
+\w Matches any alphanumeric character from the basic Latin alphabet, including the underscore.
+
+/g   --all matches
+
+*/
