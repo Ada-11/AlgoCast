@@ -8,6 +8,7 @@
 // chunk([1, 2, 3, 4, 5], 4) --> [[ 1, 2, 3, 4], [5]]
 // chunk([1, 2, 3, 4, 5], 10) --> [[ 1, 2, 3, 4, 5]]
 
+//the course method by evaluating/adding the last chunk
 function chunk(array, size) {
   let arrChunk = []
   for(let i=0; i<array.length; ++i){
@@ -21,11 +22,12 @@ function chunk(array, size) {
 
 // function chunk(array, size) {  //with slice
 //   let chunkedArr = []
-//   let index = 0
-//   while(index<array.length){
-//     let chunk = array.slice(index, index+size)
-//     chunkedArr.push(chunk)
-//     index+=size
+//   let index = 0      //this is to keep track of slice indeces
+//   while(index<array.length){ // index shld alw b < arr.length
+
+//     let chunk = array.slice(index, index+size) //start at index, end index+size of chunk
+//     chunkedArr.push(chunk) //push it into the new array
+//     index+=size // increase index by chunk size each time till >= arr.length
 //   }
 
 //  return chunkedArr
