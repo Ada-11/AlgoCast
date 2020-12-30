@@ -12,7 +12,7 @@
 
 function reverseInt(n) {
 let strNum = n.toString()
-strNum =strNum.reverse()
+strNum = strNum.split('').reverse().join('')
 
  return strNum>=0 ? strNum : -strNum
 }
