@@ -33,3 +33,8 @@ return matches ? matches.length : 0
 }
 
 module.exports = vowels;
+
+/*
+Review of RegEx rules again
+
+*/
