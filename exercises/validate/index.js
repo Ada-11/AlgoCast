@@ -5,18 +5,22 @@
 // every node's right hand child is greater than
 // the parent
 
+//with RECURSION
+
 function validate(node, min = null, max = null) {
+   //fux takes node, left and right as arg
 
   if(max !== null && node.data > max) { //
-    return false;
+    return false; // the tree is not a bSt
   }
   if(min!== null && node.data < min){
-    return false;
+    return false;     //tree is not a BST
   }
-  if (node.left && !validate(node.left, min, node.data)){
+  if (node.left && !validate(node.left, min, node.data)){    //maxis default
       return false;
   }
-  if (node.right && !validate(node.right, node.data, max)){
+  if (node.right && !validate(node.right, node.data, max)){   //min is default
+
     return false;
 }
 return true;
