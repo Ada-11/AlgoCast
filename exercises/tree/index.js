@@ -33,9 +33,9 @@ class Tree {
   traverseBF(fn){
     let queue = [this.root]
     while (queue.length){
-      let node = queue.shift()
-        queue.push(...node.children)
-        fn(node)
+      let node = queue.shift()        //remove from front
+        queue.push(...node.children) //add n back w/spread op
+        fn(node)                    //calling the callback
       }
 
 }
