@@ -21,5 +21,5 @@ class Queue {
   }
 
 }
-
+//review of Queue peek/remove/add methods
 module.exports = Queue;
