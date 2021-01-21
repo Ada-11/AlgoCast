@@ -24,3 +24,19 @@ function someRecursive(arr, callback){
 return someRecursive(arr.slice(1), callback)
 }
 
+//Write a recursive function that takes an array of arrays as arg and returns a flattened arr back.
+
+function flatten(arr){
+  let nuArr = []
+  for(let i = 0; i<arr.length; ++i){
+    if(Array.isArray(arr[i])){
+     nuArr = nuArr.concat(flatten(arr[i]))
+    }else{
+      nuArr.push(arr[i])
+    }
+    return nuArr
+  }
+
+}
+
+
