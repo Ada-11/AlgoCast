@@ -49,3 +49,27 @@ function arrayOfSumThreeB(arr, target){
   }
   return result
 }
+
+//Two Sum
+/*
+Given an array arr consisting of N integers, sorted in ascending order (least to greatest), and a separate number (a sum), determine if any 2 numbers in the array add up to the sum. Return true if any 2 different numbers within the array add up to sum. Return false if no 2 numbers in the array add up to sum.
+
+*/
+function twoSum(arr, target){
+  let result = []
+  let left = 0
+  let right= arr.length-1
+  while( left<right){
+   if(left+right===target){
+     result([left, right])
+     right--
+     left++
+   }else if(left+right<target){
+     left++
+   }else if(left+right>target){
+     right--
+   }
+
+  }
+return result
+}
