@@ -17,15 +17,15 @@ Could you solve it with constant space complexity? (The output array does not co
 //Version 1
 let productExceptSelf = function(nums) {
 const result = [];
-    let productSoFar = 1;
+    let R= 1;
     for (let i = 0; i < nums.length; i++) {
-        result[i] = productSoFar
-        productSoFar *= nums[i]
+        result[i] = R
+        R *= nums[i]
     }
-    productSoFar = 1
+    R = 1
     for (let j = nums.length-1; j >= 0; j--) {
-        result[j] *= productSoFar
-        productSoFar *= nums[j]
+        result[j] *= R
+        R *= nums[j]
     }
     return result;
 
